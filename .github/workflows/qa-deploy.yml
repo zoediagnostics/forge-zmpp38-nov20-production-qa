@@ -1,0 +1,13 @@
+name: QA deployment evidence
+on: workflow_dispatch
+jobs:
+  prod:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - run: echo 'Synthetic QA production deployment'
+  preview:
+    runs-on: ubuntu-latest
+    environment: staging
+    steps:
+      - run: echo 'Synthetic QA staging deployment'
